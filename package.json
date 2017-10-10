@@ -1,0 +1,19 @@
+{
+  "name": "phase-3-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NeoJax/phase-3-challenge.git"
+  },
+  "author": "Johnathon Lubaway",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NeoJax/phase-3-challenge/issues"
+  },
+  "homepage": "https://github.com/NeoJax/phase-3-challenge#readme"
+}
