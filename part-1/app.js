@@ -1,7 +1,8 @@
 // Requirements
 const express = require('express');
 const path = require('path');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+const pug = require('pug');
 
 const app = express();
 app.use(bodyParser.json());
@@ -20,6 +21,7 @@ app.get('/api/days/:day', (req, res) => {
     saturday: 6,
     sunday: 7,
   };
+
   console.log(daysOfWeek[day]);
   if (daysOfWeek[day] !== undefined) {
     res.send(day);
@@ -29,7 +31,9 @@ app.get('/api/days/:day', (req, res) => {
 
 // Concat arrays
 app.post('/api/concat/', (req, res) => {
-  res.render('index.html');
+  const { array1 } = req.body;
+  const { array2 } = req.body;
+  res.send(array1.concat(array2));
 });
 
 // Starting the server
