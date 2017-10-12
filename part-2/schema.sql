@@ -4,19 +4,19 @@ CREATE DATABASE grocerystore;
 \c grocerystore;
 
 CREATE TABLE products (
-	prid SERIAL PRIMARY KEY,
 	productName VARCHAR(255) NOT NULL UNIQUE,
-	price INTEGER NOT NULL,
+	price FLOAT NOT NULL,
 	section VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE orders (
 	orid SERIAL PRIMARY KEY,
 	sid INTEGER,
-	totalCost INTEGER NOT NULL
+	totalCost FLOAT NOT NULL
 );
 
 CREATE TABLE shoppers (
 	sid SERIAL PRIMARY KEY,
-  shopper VARCHAR(255) NOT NULL
+  shopper VARCHAR(255) NOT NULL,
+	orders INTEGER
 );
