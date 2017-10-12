@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Grocer</title>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="grocer.js"></script>
     <link rel="stylesheet" href="grocer.css">
   </head>
   <body class="flex flex-column">
@@ -11,7 +12,7 @@
       <h1>Grocer</h1>
       <button type="button" id="cart-button">
         Cart
-        &nbsp;<span id="cart-item-count">(3)</span>
+        &nbsp;<span id="cart-item-count">(0)</span>
       </button>
     </header>
 
@@ -31,17 +32,17 @@
           <li class="item flex flex-row-between">
             <span class="item-name">Onions</span>
             <span class="item-price">$1.11</span>
-            <button type="button">Add to cart</button>
+            <button type="button" class="add-cart-btn">Add to cart</button>
           </li>
           <li class="item flex flex-row-between">
             <span class="item-name">Tomatoes</span>
             <span class="item-price">$1.56</span>
-            <button type="button">Add to cart</button>
+            <button type="button" class="add-cart-btn">Add to cart</button>
           </li>
           <li class="item flex flex-row-between">
             <span class="item-name">Carrots</span>
             <span class="item-price">$2.88</span>
-            <button type="button">Add to cart</button>
+            <button type="button" class="add-cart-btn">Add to cart</button>
           </li>
         </ul>
 
@@ -50,7 +51,7 @@
           <li class="item flex flex-row-between">
             <span class="item-name">Cold Cuts</span>
             <span class="item-price">$1.47</span>
-            <button type="button">Add to cart</button>
+            <button type="button" class="add-cart-btn">Add to cart</button>
           </li>
         </ul>
 
@@ -59,21 +60,32 @@
           <li class="item flex flex-row-between">
             <span class="item-name">Orange Juice</span>
             <span class="item-price">$2.52</span>
-            <button type="button">Add to cart</button>
+            <button type="button" class="add-cart-btn">Add to cart</button>
           </li>
           <li class="item flex flex-row-between">
             <span class="item-name">Ice Cream</span>
             <span class="item-price">$14.08</span>
-            <button type="button">Add to cart</button>
+            <button type="button" class="add-cart-btn">Add to cart</button>
           </li>
           <li class="item flex flex-row-between">
             <span class="item-name">Pizza</span>
             <span class="item-price">$16.61</span>
-            <button type="button">Add to cart</button>
+            <button type="button" class="add-cart-btn">Add to cart</button>
           </li>
         </ul>
       </div>
     </div>
   </body>
 </html>
+<div id="cartModal">
+  <div class="cart flex flex-column">
+    <div class="cartBody">
+      <div id="cartHeader"><h1>Cart</h1><button>x</button></div>
+      <span class="cartItems"></span>
+      <span id="cartFooter">
+        <button>Clear</button> Total <span id="total-money">$3.44</span>
+      </span>
+    </div>
+  </div>
+</div>
 Raw
