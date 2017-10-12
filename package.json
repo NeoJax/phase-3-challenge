@@ -1,10 +1,11 @@
 {
   "name": "phase-3-challenge",
   "version": "1.0.0",
-  "description": "",
+  "description": "Work for phase-3-challenge",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./part-2/database_test.js",
+    "start": "nodemon ./part-1/app.js"
   },
   "repository": {
     "type": "git",

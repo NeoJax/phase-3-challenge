@@ -12,7 +12,7 @@ const {
 } = require('./database.js');
 
 describe("#grabProducts", function() {
-  expect(grabProducts('bread').then().to.eventually.equal(3)
+  expect(grabProducts('bread').then().to.eventually.equal(3))
 })
 
 describe("#grabOrders", function() {
