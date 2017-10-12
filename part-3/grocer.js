@@ -24,4 +24,8 @@ $(document).ready(() => {
       $('.cart').hide();
     }
   });
+  $('#clearButton').click(function() {
+    $('.cartItems').text('');
+    $('#total-cost').text('$0.00');
+  });
 });

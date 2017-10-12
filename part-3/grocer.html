@@ -20,15 +20,15 @@
       <div class="sidebar">
         <ul>
           <h4>Sections</h4>
-          <li>Produce</li>
-          <li>Deli</li>
-          <li>Frozen</li>
+          <a href="#Produce"><li>Produce</li></a>
+          <a href="#Deli"><li>Deli</li></a>
+          <a href="#Frozen"><li>Frozen</li></a>
         </ul>
       </div>
       <div class="content">
         <h1>Groceries</h1>
         <ul class="item-section">
-          <h3>Produce</h3>
+          <a name="Produce"><h3>Produce</h3></a>
           <li class="item flex flex-row-between">
             <span class="item-name">Onions</span>
             <span class="item-price">$1.11</span>
@@ -47,7 +47,7 @@
         </ul>
 
         <ul class="item-section">
-          <h3>Deli</h3>
+          <a name="Deli"><h3>Deli</h3></a>
           <li class="item flex flex-row-between">
             <span class="item-name">Cold Cuts</span>
             <span class="item-price">$1.47</span>
@@ -56,7 +56,7 @@
         </ul>
 
         <ul class="item-section">
-          <h3>Frozen</h3>
+          <a name="Frozen"><h3>Frozen</h3></a>
           <li class="item flex flex-row-between">
             <span class="item-name">Orange Juice</span>
             <span class="item-price">$2.52</span>
@@ -83,7 +83,7 @@
       <div id="cartHeader"><h1>Cart</h1><button id="closeModal">x</button></div>
       <span class="cartItems"></span>
       <span id="cartFooter">
-        <button>Clear</button><span id="total"> Total</span> <span id="total-cost">$0.00</span>
+        <button id="clearButton">Clear</button><span id="total"> Total</span> <span id="total-cost">$0.00</span>
       </span>
     </div>
   </div>
