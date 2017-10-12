@@ -25,6 +25,9 @@ $(document).ready(() => {
     }
   });
   $('#clearButton').click(function() {
+    count = 0;
+    total = 0;
+    $('#cart-item-count').text('(0)');
     $('.cartItems').text('');
     $('#total-cost').text('$0.00');
   });
