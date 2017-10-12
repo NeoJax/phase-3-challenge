@@ -33,6 +33,10 @@ app.get('/api/days/:day', (req, res) => {
 app.post('/api/concat/', (req, res) => {
   const { array1 } = req.body;
   const { array2 } = req.body;
+  if (!(array1 instanceof Array)) {
+    console.log("not an array");
+  }
+
   res.send(array1.concat(array2));
 });
 

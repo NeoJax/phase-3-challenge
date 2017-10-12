@@ -1,6 +1,9 @@
 // Requirements
-const database = require('./database');
-const Table = require('cli-table2');
+const {
+  grabProducts,
+  grabOrders,
+  grabShoppers
+} = require('./database.js');const Table = require('cli-table2');
 
 const command = process.argv[2];
 const string = process.argv[3];
@@ -18,8 +21,7 @@ function productList(section) {
       border: [],
     },
   });
-  const products = database.grabProducts(section);
-  products.then((data) => {
+  grabProducts(section).then((data) => {
     data.forEach((item) => {
       proTable.push([item.productname, item.section]);
     });
@@ -39,8 +41,7 @@ function shopperOrders(id) {
       border: [],
     },
   });
-  const orders = database.grabOrders(id);
-  orders.then((data) => {
+  grabOrders(id).then((data) => {
     data.forEach((item) => {
       ordTable.push([item.orid, item.totalcost]);
     });
@@ -60,8 +61,7 @@ function realShoppers() {
       border: [],
     },
   });
-  const shoppers = database.grabShoppers();
-  shoppers.then((data) => {
+  grabShoppers().then((data) => {
     data.forEach((item) => {
       shopTable.push([item.shopper, item.orders]);
     });
