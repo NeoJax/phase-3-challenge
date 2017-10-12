@@ -22,22 +22,25 @@ app.get('/api/days/:day', (req, res) => {
     sunday: 7,
   };
 
-  console.log(daysOfWeek[day]);
-  if (daysOfWeek[day] !== undefined) {
-    res.send(day);
+  const numDay = daysOfWeek[day];
+  if (numDay !== undefined) {
+    res.status(200).send(numDay.toString());
   }
-  res.send('Not a day of the week');
+  res.status(400).send(`'${day}' is not a valid day!`);
 });
 
 // Concat arrays
 app.post('/api/concat/', (req, res) => {
   const { array1 } = req.body;
   const { array2 } = req.body;
+  console.log(array1 instanceof Array);
   if (!(array1 instanceof Array)) {
-    console.log("not an array");
+    res.status(400).send({"error": "Input data should be of type Array."});
+  } else if (!(array2 instanceof Array)) {
+    res.status(400).send({"error": "Input data should be of type Array."});
   }
 
-  res.send(array1.concat(array2));
+  res.send({ "result": array1.concat(array2) });
 });
 
 // Starting the server
